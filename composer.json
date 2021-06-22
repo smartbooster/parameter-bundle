@@ -1,0 +1,36 @@
+{
+  "name": "smartbooster/parameter-bundle",
+  "type": "symfony-bundle",
+  "description": "SMART BOOSTER parameter bundle",
+  "keywords": [],
+  "homepage": "https://github.com/smartbooster/parameter-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mathieu Ducrot",
+      "email": "mathieu.ducrot@smartbooster.io",
+      "homepage": "https://www.smartbooster.io"
+    }
+  ],
+  "require": {
+
+  },
+  "require-dev": {
+
+  },
+  "autoload": {
+    "psr-4": {
+      "Smart\\ParameterBundle\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Smart\\ParameterBundle\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}
