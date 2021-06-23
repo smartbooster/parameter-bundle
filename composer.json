@@ -12,11 +12,11 @@
       "homepage": "https://www.smartbooster.io"
     }
   ],
-  "require": {
-
-  },
   "require-dev": {
-
+    "squizlabs/php_codesniffer": "^3.6",
+    "sebastian/phpcpd": "^6.0",
+    "phpmetrics/phpmetrics": "^2.7",
+    "phpstan/phpstan": "^0.12.90"
   },
   "autoload": {
     "psr-4": {

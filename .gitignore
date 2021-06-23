@@ -1,0 +1,5 @@
+/vendor/
+composer.lock
+/phpmetrics/
+coverage.*
+.php_cs.cache
