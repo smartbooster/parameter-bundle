@@ -1,5 +1,12 @@
 # SMARTBOOSTER - Parameter bundle
 
+[![Latest Stable Version](http://poser.pugx.org/smartbooster/parameter-bundle/v)](https://packagist.org/packages/smartbooster/parameter-bundle)
+[![Latest Unstable Version](http://poser.pugx.org/smartbooster/parameter-bundle/v/unstable)](https://packagist.org/packages/smartbooster/parameter-bundle)
+[![Total Downloads](http://poser.pugx.org/smartbooster/parameter-bundle/downloads)](https://packagist.org/packages/smartbooster/parameter-bundle)
+[![License](http://poser.pugx.org/smartbooster/parameter-bundle/license)](https://packagist.org/packages/smartbooster/parameter-bundle)
+
+![CI workflow](https://github.com/smartbooster/parameter-bundle/actions/workflows/ci.yml/badge.svg)
+
 ## Installation
 
 ### Add the bundle as dependency with Composer

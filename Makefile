@@ -58,4 +58,4 @@ phpstan: ## Launch PHP Static Analysis
 
 .PHONY: qa qualimetry
 qa: qualimetry ## Launch all qualimetry rules
-qualimetry: checkstyle lint-php composer-validate metrics phpstan
+qualimetry: checkstyle lint-php cpd composer-validate metrics phpstan
