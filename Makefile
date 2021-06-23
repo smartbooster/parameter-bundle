@@ -54,8 +54,16 @@ metrics: ## Build static analysis from the php in src. Repports available in ./p
 
 .PHONY: phpstan
 phpstan: ## Launch PHP Static Analysis
-	vendor/bin/phpstan analyse src --level=6
+	vendor/bin/phpstan analyse src tests --level=6 -c phpstan.neon
 
 .PHONY: qa qualimetry
 qa: qualimetry ## Launch all qualimetry rules
 qualimetry: checkstyle lint-php cpd composer-validate metrics phpstan
+
+# ====================
+## Testing
+phpunit:
+	vendor/bin/phpunit
+
+phpunit-coverage:
+	XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-text

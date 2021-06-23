@@ -3,3 +3,5 @@ composer.lock
 /phpmetrics/
 coverage.*
 .php_cs.cache
+.phpunit.result.cache
+/var/

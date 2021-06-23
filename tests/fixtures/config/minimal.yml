@@ -1,0 +1,5 @@
+# Config with only minimal parameter configuration
+smart_parameter:
+    parameters:
+        dummy_parameter:
+            value:  "some value"

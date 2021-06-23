@@ -1,0 +1,11 @@
+# Full config fixture
+smart_parameter:
+    parameters:
+        # Textual paramter
+        dummy_support_emails:
+            value:  "support@example.com, technical-support@example.com"
+            help:   "This parameter is used by the mailer for support recipients. Format : Separate email by comma."
+        # Number parameter
+        dummy_homepage_cache_duration:
+            value:  3600
+            help:   "This parameter is used by the backend to set the duration of cache applied to the Homepage. Set the duration in second."
