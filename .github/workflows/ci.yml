@@ -40,6 +40,11 @@ jobs:
       - name: Qualimetry
         run: make qa
 
-      # —— Test 🧪 ————————————————————————————————————————————————————————————
-      - name: Phpunit test and coverage
-        run: make phpunit-coverage
+      # —— Tests 🧪 ————————————————————————————————————————————————————————————
+      - name: Phpunit tests
+        run: XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-clover coverage.xml
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: "Upload coverage to Codecov"
+        uses: codecov/codecov-action@v1

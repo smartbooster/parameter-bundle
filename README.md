@@ -6,6 +6,7 @@
 [![License](http://poser.pugx.org/smartbooster/parameter-bundle/license)](https://packagist.org/packages/smartbooster/parameter-bundle)
 
 ![CI workflow](https://github.com/smartbooster/parameter-bundle/actions/workflows/ci.yml/badge.svg)
+[![codecov](https://codecov.io/gh/smartbooster/parameter-bundle/branch/master/graph/badge.svg?token=QQZPRVXGL8)](https://codecov.io/gh/smartbooster/parameter-bundle)
 
 ## Installation
 
