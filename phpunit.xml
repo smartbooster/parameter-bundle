@@ -8,6 +8,7 @@
   <php>
     <ini name="error_reporting" value="-1"/>
     <ini name="memory_limit" value="-1"/>
+    <server name="KERNEL_CLASS" value="Smart\ParameterBundle\Tests\AppKernel"/>
   </php>
   <testsuites>
     <testsuite name="Test suite">
@@ -22,4 +23,7 @@
       <directory>./src/SmartParameterBundle.php</directory>
     </exclude>
   </coverage>
+  <extensions>
+    <extension class="DAMA\DoctrineTestBundle\PHPUnit\PHPUnitExtension" />
+  </extensions>
 </phpunit>

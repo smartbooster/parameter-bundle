@@ -1,0 +1,10 @@
+services:
+  smart_parameter.parameter_provider:
+    class: Smart\ParameterBundle\Provider\ParameterProvider
+    public: true
+    arguments:
+      - '@Doctrine\ORM\EntityManagerInterface'
+
+  Smart\ParameterBundle\Provider\ParameterProvider:
+    public: false
+    alias: smart_parameter.parameter_provider

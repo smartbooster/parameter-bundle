@@ -17,7 +17,9 @@
     "symfony/http-kernel": "^4.4",
     "symfony/config": "^4.4",
     "symfony/yaml": "^4.4",
-    "symfony/dependency-injection": "^4.4"
+    "symfony/dependency-injection": "^4.4",
+    "doctrine/orm": "^2.9",
+    "doctrine/doctrine-bundle": "^2.4"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.6",
@@ -26,7 +28,12 @@
     "phpstan/phpstan": "^0.12.90",
     "phpunit/phpunit": "^9.5",
     "phpstan/phpstan-symfony": "^0.12.37",
-    "symfony/framework-bundle": "^4.4"
+    "symfony/framework-bundle": "^4.4",
+    "phpstan/phpstan-doctrine": "^0.12.39",
+    "dama/doctrine-test-bundle": "^6.6",
+    "liip/test-fixtures-bundle": "^1.11",
+    "theofidry/alice-data-fixtures": "^1.4",
+    "doctrine/doctrine-fixtures-bundle": "^3.4"
   },
   "autoload": {
     "psr-4": {
