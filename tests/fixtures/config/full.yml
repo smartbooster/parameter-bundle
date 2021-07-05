@@ -1,7 +1,7 @@
 # Full config fixture
 smart_parameter:
     parameters:
-        # Textual paramter
+        # Textual parameter
         dummy_support_emails:
             value:  "support@example.com, technical-support@example.com"
             help:   "This parameter is used by the mailer for support recipients. Format : Separate email by comma."

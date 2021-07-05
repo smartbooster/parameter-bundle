@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="fr" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="dashboard.label_settings">
+                <source>dashboard.label_settings</source>
+                <target>Paramètrages</target>
+            </trans-unit>
+            <trans-unit id="dashboard.label_parameter">
+                <source>dashboard.label_parameter</source>
+                <target>Paramètres</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_parameter_list">
+                <source>breadcrumb.link_parameter_list</source>
+                <target>Liste des paramètres</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_parameter_create">
+                <source>breadcrumb.link_parameter_create</source>
+                <target>Création d'un paramètre</target>
+            </trans-unit>
+            <trans-unit id="fieldset.label_general">
+                <source>fieldset.label_general</source>
+                <target>Informations générales</target>
+            </trans-unit>
+            <trans-unit id="field.label_id">
+                <source>field.label_id</source>
+                <target>#</target>
+            </trans-unit>
+            <trans-unit id="field.label_code">
+                <source>field.label_code</source>
+                <target>Code</target>
+            </trans-unit>
+            <trans-unit id="field.label_help">
+                <source>field.label_help</source>
+                <target>Aide</target>
+            </trans-unit>
+            <trans-unit id="field.label_value">
+                <source>field.label_value</source>
+                <target>Valeur</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

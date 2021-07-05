@@ -29,3 +29,12 @@ services:
   Smart\ParameterBundle\Command\ParameterLoadCommand:
     public: false
     alias: smart_parameter.parameter_load_command
+
+  admin.parameter:
+    class: Smart\ParameterBundle\Admin\ParameterAdmin
+    arguments:
+      - ~
+      - Smart\ParameterBundle\Entity\Parameter
+      - ~
+    tags:
+      - { name: sonata.admin, manager_type: orm, label: dashboard.label_parameter }
