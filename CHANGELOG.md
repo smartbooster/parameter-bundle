@@ -5,8 +5,8 @@ CHANGELOG for 1.x
 
 ### Added
 
-- [[#2](https://github.com/smartbooster/parameter-bundle/issues/2)] Add bundle Configuration
-- [[#2](https://github.com/smartbooster/parameter-bundle/issues/2)] Add Parameter Entity
-- [[#2](https://github.com/smartbooster/parameter-bundle/issues/2)] Add ParameterProvider
-- [[#2](https://github.com/smartbooster/parameter-bundle/issues/2)] Add ParameterLoader with ParameterLoadCommand
-- [[#2](https://github.com/smartbooster/parameter-bundle/issues/2)] Add ParameterAdmin based on Sonata
+*   [[#2](https://github.com/smartbooster/parameter-bundle/issues/2)] Add bundle Configuration
+*   [[#2](https://github.com/smartbooster/parameter-bundle/issues/2)] Add Parameter Entity
+*   [[#2](https://github.com/smartbooster/parameter-bundle/issues/2)] Add ParameterProvider
+*   [[#2](https://github.com/smartbooster/parameter-bundle/issues/2)] Add ParameterLoader with ParameterLoadCommand
+*   [[#2](https://github.com/smartbooster/parameter-bundle/issues/2)] Add ParameterAdmin based on Sonata

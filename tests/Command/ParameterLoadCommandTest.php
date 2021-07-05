@@ -17,7 +17,6 @@ use Symfony\Component\Console\Tester\CommandTester;
 class ParameterLoadCommandTest extends AbstractWebTestCase
 {
     private ?ParameterLoadCommand $command;
-    private ?EntityManagerInterface $entityManager;
 
     public function setUp(): void
     {
