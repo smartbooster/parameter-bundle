@@ -1,0 +1,9 @@
+Smart\ParameterBundle\Entity\Parameter:
+  minimal_param:
+    code: minimal_param
+    value: "Text Value"
+
+  full_param:
+    code: full_param
+    value: "Expected Parameter Value"
+    help: "Expected Parameter Help"

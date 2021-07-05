@@ -1,0 +1,10 @@
+Smart\ParameterBundle\Entity\Parameter:
+  # will count as an update because the help data is different from configuration
+  dummy_support_emails:
+    code: dummy_support_emails
+    value:  "support@example.com"
+    help:  "Format : Separate email by comma."
+  # will count as an update because the help is null vs set from configuration
+  dummy_homepage_cache_duration:
+    code: dummy_homepage_cache_duration
+    value: 1200

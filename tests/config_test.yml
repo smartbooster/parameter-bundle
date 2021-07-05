@@ -1,0 +1,36 @@
+framework:
+    test: true
+    secret: test
+
+doctrine:
+    dbal:
+        driver:   pdo_sqlite
+        charset:  UTF8
+        path:     "%kernel.cache_dir%/test.db"
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        auto_mapping: true
+
+smart_parameter:
+    parameters:
+        # Textual paramter
+        dummy_support_emails:
+            value:  "support@example.com, technical-support@example.com"
+            help:   "This parameter is used by the mailer for support recipients. Format : Separate email by comma."
+        # Number parameter
+        dummy_homepage_cache_duration:
+            value:  3600
+            help:   "This parameter is used by the backend to set the duration of cache applied to the Homepage. Set the duration in second."
+
+dama_doctrine_test:
+    enable_static_connection: true
+    enable_static_meta_data_cache: true
+    enable_static_query_cache: true
+
+fidry_alice_data_fixtures:
+    default_purge_mode: delete # default is "delete" but you can change it to "truncate" or "no_purge"
+    db_drivers:
+        doctrine_orm: true
+        doctrine_mongodb_odm: false
+        doctrine_phpcr_odm: false
+        eloquent_orm: false

@@ -1,4 +1,4 @@
-#
+# Fixture config with undefined parameter value
 smart_parameter:
     parameters:
         parameter_without_value:

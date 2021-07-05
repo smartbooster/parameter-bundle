@@ -1,0 +1,31 @@
+services:
+  smart_parameter.parameter_provider:
+    class: Smart\ParameterBundle\Provider\ParameterProvider
+    public: true
+    arguments:
+      - '@Doctrine\ORM\EntityManagerInterface'
+
+  Smart\ParameterBundle\Provider\ParameterProvider:
+    public: false
+    alias: smart_parameter.parameter_provider
+
+  smart_parameter.parameter_loader:
+    class: Smart\ParameterBundle\Loader\ParameterLoader
+    public: true
+    arguments:
+      - '@Doctrine\ORM\EntityManagerInterface'
+
+  Smart\ParameterBundle\Loader\ParameterLoader:
+    public: false
+    alias: smart_parameter.parameter_loader
+
+  smart_parameter.parameter_load_command:
+    class: Smart\ParameterBundle\Command\ParameterLoadCommand
+    public: true
+    arguments:
+      - '@smart_parameter.parameter_loader'
+    tags: ['console.command']
+
+  Smart\ParameterBundle\Command\ParameterLoadCommand:
+    public: false
+    alias: smart_parameter.parameter_load_command

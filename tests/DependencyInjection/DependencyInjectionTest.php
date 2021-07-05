@@ -2,12 +2,13 @@
 
 namespace Smart\ParameterBundle\Tests\DependencyInjection;
 
+use Doctrine\ORM\EntityManagerInterface;
 use PHPUnit\Framework\TestCase;
 use Smart\ParameterBundle\SmartParameterBundle;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Loader\FileLoader;
+use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 /**
@@ -23,13 +24,7 @@ class DependencyInjectionTest extends TestCase
     {
         $bundle = new SmartParameterBundle();
         $this->container = new ContainerBuilder();
-
-        $this->container->setParameter('kernel.debug', true);
-        $this->container->setParameter('kernel.bundles', [
-            'FrameworkBundle' => \Symfony\Bundle\FrameworkBundle\FrameworkBundle::class,
-        ]);
-        $this->container->setParameter('kernel.environment', 'test');
-
+        $this->container->setDefinition('Doctrine\ORM\EntityManagerInterface', new Definition(EntityManagerInterface::class));
         $this->container->registerExtension($bundle->getContainerExtension());
         $bundle->build($this->container);
     }

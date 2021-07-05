@@ -1,0 +1,7 @@
+# test batch flush on handleExistingParameters
+Smart\ParameterBundle\Entity\Parameter:
+  parameter_to_delete_{1..20}:
+    code: parameter_to_delete_<current()>
+    value:  "value"
+
+
