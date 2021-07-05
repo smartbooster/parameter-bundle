@@ -13,7 +13,7 @@ class ParameterLoader
     const BATCH_SIZE = 20;
 
     private EntityManagerInterface $entityManager;
-    private array $parameters;
+    private array $parameters = [];
     private array $logs = [
         "nb_updated" => 0,
         "nb_skipped" => 0,
