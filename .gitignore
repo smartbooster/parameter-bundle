@@ -1,6 +1,7 @@
 /vendor/
 composer.lock
 /phpmetrics/
+/phpunit-coverage-html/
 coverage.*
 .php_cs.cache
 .phpunit.result.cache

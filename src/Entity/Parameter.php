@@ -32,7 +32,7 @@ class Parameter
     /**
      * @ORM\Column(name="help", type="text", nullable=true)
      */
-    private ?string $help;
+    private ?string $help = null;
 
     public function __toString()
     {

@@ -1,0 +1,4 @@
+Smart\ParameterBundle\Entity\Parameter:
+  param_to_delete:
+    code: param_to_delete
+    value:  "useless param to delete"

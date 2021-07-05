@@ -1,0 +1,12 @@
+# those parameters don't exist in the config so they should be deleted
+Smart\ParameterBundle\Entity\Parameter:
+  parameter_to_delete:
+    code: parameter_to_delete
+    value:  "value"
+  another_parameter_to_delete:
+    code: another_parameter_to_delete
+    value: "value"
+  again_another_parameter_to_delete:
+    code: again_another_parameter_to_delete
+    value: "value"
+

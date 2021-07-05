@@ -12,5 +12,14 @@ use Smart\ParameterBundle\Entity\Parameter;
  */
 class ParameterRepository extends EntityRepository
 {
-
+    /**
+     * @return Parameter[]
+     */
+    public function findExisting(): array
+    {
+        return $this->createQueryBuilder('p', 'p.code')
+            ->getQuery()
+            ->getResult()
+        ;
+    }
 }

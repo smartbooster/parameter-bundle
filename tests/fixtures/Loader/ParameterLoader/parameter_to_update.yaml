@@ -1,0 +1,8 @@
+Smart\ParameterBundle\Entity\Parameter:
+  dummy_support_emails:
+    code: dummy_support_emails
+    value:  "email-value-wont-change-after-load@test.com"
+    help:  "Help value before load"
+  dummy_homepage_cache_duration:
+    code: dummy_homepage_cache_duration
+    value: 1200

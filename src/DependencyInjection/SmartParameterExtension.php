@@ -20,9 +20,16 @@ class SmartParameterExtension extends Extension
      */
     public function load(array $configs, ContainerBuilder $container)
     {
-        $this->processConfiguration(new Configuration(), $configs);
+        $config = $this->processConfiguration(new Configuration(), $configs);
 
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../../config'));
         $loader->load('services.yaml');
+
+        $parameterLoader = $container->getDefinition('smart_parameter.parameter_loader');
+        if (isset($config['parameters']) and is_array($config['parameters'])) {
+            foreach ($config['parameters'] as $code => $data) {
+                $parameterLoader->addMethodCall('addParameter', [$code, $data]);
+            }
+        }
     }
 }

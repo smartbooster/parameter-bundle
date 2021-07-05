@@ -65,5 +65,8 @@ qualimetry: checkstyle lint-php cpd composer-validate metrics phpstan
 phpunit:
 	vendor/bin/phpunit
 
-phpunit-coverage:
+coverage-text:
 	XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-text
+
+coverage-html:
+	XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-html phpunit-coverage-html
