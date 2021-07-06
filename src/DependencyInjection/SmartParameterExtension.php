@@ -26,7 +26,7 @@ class SmartParameterExtension extends Extension
         $loader->load('services.yaml');
 
         $parameterLoader = $container->getDefinition('smart_parameter.parameter_loader');
-        if (isset($config['parameters']) and is_array($config['parameters'])) {
+        if (isset($config['parameters']) && is_array($config['parameters'])) {
             foreach ($config['parameters'] as $code => $data) {
                 $parameterLoader->addMethodCall('addParameter', [$code, $data]);
             }

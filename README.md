@@ -8,6 +8,7 @@
 ![CI workflow](https://github.com/smartbooster/parameter-bundle/actions/workflows/ci.yml/badge.svg)
 [![codecov](https://codecov.io/gh/smartbooster/parameter-bundle/branch/master/graph/badge.svg?token=QQZPRVXGL8)](https://codecov.io/gh/smartbooster/parameter-bundle)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/160f4ad245a2407ab316d13438b07543)](https://www.codacy.com/gh/smartbooster/parameter-bundle/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=smartbooster/parameter-bundle&amp;utm_campaign=Badge_Grade)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=smartbooster_parameter-bundle&metric=alert_status)](https://sonarcloud.io/dashboard?id=smartbooster_parameter-bundle)
 
 ## Installation
 
