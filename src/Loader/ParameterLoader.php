@@ -13,7 +13,7 @@ class ParameterLoader
     const BATCH_SIZE = 20;
 
     private EntityManagerInterface $entityManager;
-    private array $parameters;
+    private array $parameters = [];
     private array $logs = [
         "nb_updated" => 0,
         "nb_skipped" => 0,
@@ -73,7 +73,7 @@ class ParameterLoader
     {
         if (isset($this->parameters[$code])) {
             // update help for existing parameters
-            if (isset($this->parameters[$code]['help']) and $parameter->getHelp() !== $this->parameters[$code]['help']) {
+            if (isset($this->parameters[$code]['help']) && $parameter->getHelp() !== $this->parameters[$code]['help']) {
                 $parameter->setHelp($this->parameters[$code]['help']);
                 $this->entityManager->persist($parameter);
                 $this->logs["nb_updated"]++;
@@ -85,7 +85,7 @@ class ParameterLoader
             $this->logs["nb_deleted"]++;
         }
 
-        if (($i % self::BATCH_SIZE) === 0 and !$this->dryRun) {
+        if (($i % self::BATCH_SIZE) === 0 && !$this->dryRun) {
             $this->entityManager->flush();
             $this->entityManager->clear();
         }
@@ -103,7 +103,7 @@ class ParameterLoader
         $this->entityManager->persist($parameter);
         $this->logs["nb_inserted"]++;
 
-        if (($i % self::BATCH_SIZE) === 0 and !$this->dryRun) {
+        if (($i % self::BATCH_SIZE) === 0 && !$this->dryRun) {
             $this->entityManager->flush();
             $this->entityManager->clear();
         }

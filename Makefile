@@ -43,6 +43,7 @@ lint-php: ## Linter PHP
 .PHONY: composer-validate
 composer-validate: ## Validate composer.json and composer.lock
 	composer validate composer.json
+	symfony check:security
 
 .PHONY: cpd
 cpd: ## Copy paste detector
