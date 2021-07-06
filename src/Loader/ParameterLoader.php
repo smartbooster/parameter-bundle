@@ -20,7 +20,7 @@ class ParameterLoader
         "nb_deleted" => 0,
         "nb_inserted" => 0,
     ];
-    private bool $dryRun;
+    private bool $dryRun = false;
 
     public function __construct(EntityManagerInterface $entityManager)
     {
@@ -37,12 +37,14 @@ class ParameterLoader
      */
     public function load(bool $dryRun = false): array
     {
-        $this->entityManager->getConnection()->beginTransaction();
         $this->dryRun = $dryRun;
+        if (false === $this->dryRun) {
+            $this->entityManager->getConnection()->beginTransaction();
+        }
 
         try {
             // @phpstan-ignore-next-line
-            $existingParameters = $this->entityManager->getRepository(Parameter::class)->findExisting();
+            $existingParameters = $this->entityManager->getRepository(Parameter::class)->findAllByCode();
             $i = 1;
             foreach ($existingParameters as $code => $parameter) {
                 $this->handleExistingParameters($code, $parameter, $i);
@@ -55,16 +57,16 @@ class ParameterLoader
                 ++$i;
             }
 
-            if (!$this->dryRun) {
+            if (false === $this->dryRun) {
                 $this->entityManager->flush();
                 $this->entityManager->clear();
                 $this->entityManager->getConnection()->commit();
             }
-        // @codeCoverageIgnoreStart
         } catch (\Exception $e) {
-            $this->entityManager->getConnection()->rollBack();
+            if (false === $this->dryRun) {
+                $this->entityManager->getConnection()->rollBack();
+            }
         }
-        // @codeCoverageIgnoreEnd
 
         return $this->logs;
     }
@@ -85,7 +87,7 @@ class ParameterLoader
             $this->logs["nb_deleted"]++;
         }
 
-        if (($i % self::BATCH_SIZE) === 0 && !$this->dryRun) {
+        if (($i % self::BATCH_SIZE) === 0 && false === $this->dryRun) {
             $this->entityManager->flush();
             $this->entityManager->clear();
         }
@@ -103,7 +105,7 @@ class ParameterLoader
         $this->entityManager->persist($parameter);
         $this->logs["nb_inserted"]++;
 
-        if (($i % self::BATCH_SIZE) === 0 && !$this->dryRun) {
+        if (($i % self::BATCH_SIZE) === 0 && false === $this->dryRun) {
             $this->entityManager->flush();
             $this->entityManager->clear();
         }

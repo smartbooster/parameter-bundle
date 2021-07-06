@@ -71,4 +71,18 @@ class ParameterAdmin extends AbstractAdmin
             ->end()
         ;
     }
+
+    public function getExportFormats(): array
+    {
+        return ['csv'];
+    }
+
+    public function getExportFields(): array
+    {
+        return [
+            $this->trans('field.label_code') => 'code',
+            $this->trans('field.label_value') => 'value',
+            $this->trans('field.label_help') => 'help',
+        ];
+    }
 }
