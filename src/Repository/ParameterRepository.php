@@ -15,7 +15,7 @@ class ParameterRepository extends EntityRepository
     /**
      * @return Parameter[]
      */
-    public function findExisting(): array
+    public function findAllByCode(): array
     {
         return $this->createQueryBuilder('p', 'p.code')
             ->getQuery()
