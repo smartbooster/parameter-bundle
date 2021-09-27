@@ -33,7 +33,7 @@ class ParameterProvider
 
         $parameter = $this->entityManager->getRepository(Parameter::class)->findOneBy(['code' => $code]);
 
-        if ($parameter == null) {
+        if ($parameter === null) {
             throw new EntityNotFoundException("The parameter with code \"$code\" was not found.");
         }
         $this->parameters[$code] = $parameter;

@@ -1,8 +1,8 @@
 /vendor/
 composer.lock
-/phpmetrics/
-/phpunit-coverage-html/
+/build/
 coverage.*
 .php_cs.cache
 .phpunit.result.cache
 /var/
+/.phpcs-cache

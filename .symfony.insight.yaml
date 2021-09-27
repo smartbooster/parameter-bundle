@@ -1,0 +1,4 @@
+rules:
+  # Skip Rule #24-000 https://insight.symfony.com/what-we-analyse/composer.using_migrations
+  composer.using_migrations:
+    enabled: false
