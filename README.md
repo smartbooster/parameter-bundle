@@ -10,6 +10,8 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/160f4ad245a2407ab316d13438b07543)](https://www.codacy.com/gh/smartbooster/parameter-bundle/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=smartbooster/parameter-bundle&amp;utm_campaign=Badge_Grade)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=smartbooster_parameter-bundle&metric=alert_status)](https://sonarcloud.io/dashboard?id=smartbooster_parameter-bundle)
 
+[![SymfonyInsight](https://insight.symfony.com/projects/c4ca3128-074c-4513-b7b9-32ceb8410c39/small.svg)](https://insight.symfony.com/projects/c4ca3128-074c-4513-b7b9-32ceb8410c39)
+
 ## Installation
 
 ### Add the bundle as dependency with Composer
