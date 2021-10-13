@@ -3,7 +3,7 @@
 ## -----
 .PHONY: phpunit coverage-text coverage-html coverage
 phpunit: ## Launch all tests
-	vendor/bin/simple-phpunit --colors=never
+	vendor/bin/phpunit --colors=never
 
 coverage-text: ## Launch all tests with code coverage text
 	XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-text
