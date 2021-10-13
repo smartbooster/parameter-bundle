@@ -51,7 +51,7 @@ class DependencyInjectionTest extends TestCase
             ],
             'invalid_missing_parameter_value' => [
                 'ressource' => 'invalid_missing_parameter_value',
-                'message' => 'The child node "value" at path "smart_parameter.parameters.parameter_without_value" must be configured.',
+                'message' => 'The child config "value" under "smart_parameter.parameters.parameter_without_value" must be configured.',
             ],
         ];
     }
