@@ -19,7 +19,7 @@ class ParameterProviderTest extends AbstractWebTestCase
     {
         parent::setUp();
 
-        $this->provider = self::$container->get(ParameterProvider::class);
+        $this->provider = static::getContainer()->get(ParameterProvider::class);
     }
 
     public function testGetNotFoundException(): void
@@ -32,7 +32,7 @@ class ParameterProviderTest extends AbstractWebTestCase
 
     public function testGetOk(): void
     {
-        $this->loadFixtureFiles([$this->getFixtureDir() . "/Provider/ParameterProvider/parameter.yaml"]);
+        $this->databaseTool->loadAliceFixture([$this->getFixtureDir() . "/Provider/ParameterProvider/parameter.yaml"]);
 
         $parameter = $this->provider->get('full_param');
         $this->assertSame("full_param", (string) $parameter);
@@ -50,7 +50,7 @@ class ParameterProviderTest extends AbstractWebTestCase
 
     public function testGetValueOk(): void
     {
-        $this->loadFixtureFiles([$this->getFixtureDir() . "/Provider/ParameterProvider/parameter.yaml"]);
+        $this->databaseTool->loadAliceFixture([$this->getFixtureDir() . "/Provider/ParameterProvider/parameter.yaml"]);
 
         $this->assertSame("Text Value", $this->provider->getValue("minimal_param"));
     }

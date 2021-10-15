@@ -3,7 +3,8 @@
 namespace Smart\ParameterBundle\Tests;
 
 use Doctrine\ORM\EntityManagerInterface;
-use Liip\TestFixturesBundle\Test\FixturesTrait;
+use Liip\TestFixturesBundle\Services\DatabaseToolCollection;
+use Liip\TestFixturesBundle\Services\DatabaseTools\ORMDatabaseTool;
 use Smart\ParameterBundle\Entity\Parameter;
 use Smart\ParameterBundle\Repository\ParameterRepository;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
@@ -13,19 +14,21 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
  */
 abstract class AbstractWebTestCase extends WebTestCase
 {
-    use FixturesTrait;
-
-    private ?EntityManagerInterface $entityManager;
+    protected ORMDatabaseTool $databaseTool;
+    protected ?EntityManagerInterface $entityManager = null;
 
     public function setUp(): void
     {
         parent::setUp();
 
         self::bootKernel();
-        $this->entityManager = self::$container->get(EntityManagerInterface::class);
+
+        $container = static::getContainer();
+        $this->databaseTool = $container->get(DatabaseToolCollection::class)->get();
+        $this->entityManager = $container->get(EntityManagerInterface::class);
 
         // Empty load to guarantee that the base will always be available
-        $this->loadFixtureFiles([]);
+        $this->databaseTool->loadAliceFixture([]);
     }
 
     protected function tearDown(): void
