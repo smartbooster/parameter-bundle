@@ -34,3 +34,7 @@ Provide an easy way to administrate your app parameters through each environment
 Pull requests are welcome. 
 
 Thanks to [everyone who has contributed](https://github.com/smartbooster/parameter-bundle/contributors) already.
+
+---
+
+*This project is supported by [SmartBooster](https://www.smartbooster.io)*
