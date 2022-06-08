@@ -6,7 +6,7 @@ use Smart\SonataBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
-use Sonata\AdminBundle\Route\RouteCollection;
+use Sonata\AdminBundle\Route\RouteCollectionInterface;
 use Sonata\AdminBundle\Show\ShowMapper;
 
 /**
@@ -14,7 +14,7 @@ use Sonata\AdminBundle\Show\ShowMapper;
  */
 class ParameterAdmin extends AbstractAdmin
 {
-    protected function configureRoutes(RouteCollection $collection): void
+    protected function configureRoutes(RouteCollectionInterface $collection): void
     {
         $collection
             ->remove('create')
@@ -77,12 +77,14 @@ class ParameterAdmin extends AbstractAdmin
         return ['csv'];
     }
 
-    public function getExportFields(): array
+    public function configureExportFields(): array
     {
+        $translator = $this->getTranslator();
+
         return [
-            $this->trans('field.label_code') => 'code',
-            $this->trans('field.label_value') => 'value',
-            $this->trans('field.label_help') => 'help',
+            $translator->trans('field.label_code') => 'code',
+            $translator->trans('field.label_value') => 'value',
+            $translator->trans('field.label_help') => 'help',
         ];
     }
 }

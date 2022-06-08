@@ -19,12 +19,12 @@ class ParameterLoaderTest extends AbstractWebTestCase
     {
         parent::setUp();
 
-        $this->loader = self::$container->get(ParameterLoader::class);
+        $this->loader = static::getContainer()->get(ParameterLoader::class);
     }
 
     public function testUpdate(): void
     {
-        $this->loadFixtureFiles([$this->getFixtureDir() . "/Loader/ParameterLoader/parameter_to_update.yaml"]);
+        $this->databaseTool->loadAliceFixture([$this->getFixtureDir() . "/Loader/ParameterLoader/parameter_to_update.yaml"]);
 
         // Assert data before loading
         $parameterWithHelp = $this->getParameterRepository()->findOneBy(['code' => "dummy_support_emails"]);
@@ -69,7 +69,7 @@ class ParameterLoaderTest extends AbstractWebTestCase
 
     public function testDelete(): void
     {
-        $this->loadFixtureFiles([$this->getFixtureDir() . "/Loader/ParameterLoader/parameter_to_delete.yaml"]);
+        $this->databaseTool->loadAliceFixture([$this->getFixtureDir() . "/Loader/ParameterLoader/parameter_to_delete.yaml"]);
 
         // check that the parameter exist in database before loading
         $this->assertInstanceOf(Parameter::class, $this->getParameterRepository()->findOneBy(['code' => 'param_to_delete']));

@@ -22,7 +22,7 @@ class ParameterLoadCommandTest extends AbstractWebTestCase
     public function testExecute(string $fixture, array $logs): void
     {
         # check tests/config_test.php for parameters configuration reference
-        $this->loadFixtureFiles([$this->getFixtureDir() . "/Command/ParameterLoadCommand/$fixture.yaml"]);
+        $this->databaseTool->loadAliceFixture([$this->getFixtureDir() . "/Command/ParameterLoadCommand/$fixture.yaml"]);
 
         $application = new Application(self::$kernel);
         $command = $application->find('smart:parameter:load');

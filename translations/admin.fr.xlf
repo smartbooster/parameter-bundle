@@ -4,7 +4,7 @@
         <body>
             <trans-unit id="dashboard.label_settings">
                 <source>dashboard.label_settings</source>
-                <target>Paramètrages</target>
+                <target>Paramétrages</target>
             </trans-unit>
             <trans-unit id="dashboard.label_parameter">
                 <source>dashboard.label_parameter</source>
