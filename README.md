@@ -1,5 +1,7 @@
 # SMARTBOOSTER - Parameter bundle
 
+> :warning: This package is abandoned and no longer maintained. The author suggests using the [smartbooster/sonata-bundle](https://github.com/smartbooster/sonata-bundle) package instead.
+
 [![Latest Stable Version](http://poser.pugx.org/smartbooster/parameter-bundle/v)](https://packagist.org/packages/smartbooster/parameter-bundle)
 [![Latest Unstable Version](http://poser.pugx.org/smartbooster/parameter-bundle/v/unstable)](https://packagist.org/packages/smartbooster/parameter-bundle)
 [![Total Downloads](http://poser.pugx.org/smartbooster/parameter-bundle/downloads)](https://packagist.org/packages/smartbooster/parameter-bundle)
